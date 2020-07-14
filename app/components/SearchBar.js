@@ -46,9 +46,12 @@ const styles = StyleSheet.create({
     paddingBottom: 10,
     width: '100%',
   },
-  text: {
-    fontSize: 40,
-    fontWeight: 'bold',
+  label: {
+    color: colors.secondary,
+    fontSize: 18,
+    letterSpacing: 1,
+    position: 'relative',
+    top: -10,
   },
   placeholder: {
     color: colors.secondary,
@@ -57,17 +60,15 @@ const styles = StyleSheet.create({
     position: 'relative',
     top: 50,
   },
-  label: {
-    color: colors.secondary,
-    fontSize: 18,
-    letterSpacing: 1,
-    position: 'relative',
-    top: -10,
-  },
   row: {
     alignItems: 'center',
     flexDirection: 'row',
     justifyContent: 'space-between',
+  },
+  text: {
+    flex: 1,
+    fontSize: 40,
+    fontWeight: 'bold',
   },
 });
 

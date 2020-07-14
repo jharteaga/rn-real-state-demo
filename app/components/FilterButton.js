@@ -1,5 +1,6 @@
 import React from 'react';
 import { StyleSheet, View, TouchableOpacity, Text } from 'react-native';
+import colors from '../config/colors';
 
 function FilterButton({ title }) {
   return (
@@ -14,7 +15,7 @@ function FilterButton({ title }) {
 const styles = StyleSheet.create({
   container: {
     alignItems: 'center',
-    backgroundColor: '#F6F7FB',
+    backgroundColor: colors.mediumGray,
     borderRadius: 40,
     height: 50,
     justifyContent: 'center',

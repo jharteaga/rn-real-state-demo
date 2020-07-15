@@ -2,9 +2,9 @@ import React from 'react';
 import { StyleSheet, View, TouchableOpacity, Text } from 'react-native';
 import colors from '../config/colors';
 
-function FilterButton({ title }) {
+function FilterButton({ title, style }) {
   return (
-    <TouchableOpacity>
+    <TouchableOpacity style={style}>
       <View style={styles.container}>
         <Text style={styles.text}>{title}</Text>
       </View>
@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
   },
   text: {
     fontSize: 16,
-    fontWeight: 'bold',
+    fontWeight: '700',
   },
 });
 

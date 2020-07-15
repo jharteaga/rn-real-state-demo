@@ -18,3 +18,5 @@ const houses = [
     location: { latitude: 37.78719, longitude: -122.408421 },
   },
 ];
+
+export default houses;

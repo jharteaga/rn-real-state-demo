@@ -28,7 +28,7 @@ function ListingScreen(props) {
             />
           ))}
         </ScrollView>
-        <ScrollView style={styles.listing}>
+        <ScrollView showsVerticalScrollIndicator={false} style={styles.listing}>
           {houses.map((h) => (
             <ListItem item={h} key={h.id} style={styles.listItem} />
           ))}
@@ -45,16 +45,17 @@ const styles = StyleSheet.create({
   },
   filterButton: {
     marginRight: 10,
+    marginBottom: 30,
   },
   header: {
     marginTop: 20,
     marginHorizontal: 5,
   },
   listing: {
-    marginTop: 30,
+    marginTop: 10,
   },
   listItem: {
-    marginHorizontal: 10,
+    marginVertical: 15,
   },
   searchBar: {
     marginTop: 40,

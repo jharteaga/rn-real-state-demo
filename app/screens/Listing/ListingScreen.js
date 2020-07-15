@@ -6,6 +6,7 @@ import FilterButton from '../../components/FilterButton';
 import Header from './components/Header';
 import Screen from '../../components/Screen';
 import SearchBar from '../../components/SearchBar';
+import ListItem from './components/ListItem';
 
 function ListingScreen(props) {
   return (
@@ -27,6 +28,7 @@ function ListingScreen(props) {
               />
             ))}
           </ScrollView>
+          <ListItem />
         </View>
       </ScrollView>
     </Screen>

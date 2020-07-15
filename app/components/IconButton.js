@@ -11,10 +11,8 @@ function IconButton({
   style,
 }) {
   return (
-    <TouchableOpacity>
-      <View style={[styles.container, style]}>
-        <MaterialCommunityIcons name={name} size={iconSize} color={iconColor} />
-      </View>
+    <TouchableOpacity style={[styles.container, style]}>
+      <MaterialCommunityIcons name={name} size={iconSize} color={iconColor} />
     </TouchableOpacity>
   );
 }

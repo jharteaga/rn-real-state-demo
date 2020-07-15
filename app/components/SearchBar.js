@@ -10,7 +10,7 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 import colors from '../config/colors';
 
-function SearchBar(props) {
+function SearchBar({ style }) {
   const [city, setCity] = useState('');
 
   const handleChange = (text) => {
@@ -18,7 +18,7 @@ function SearchBar(props) {
   };
 
   return (
-    <View style={styles.container}>
+    <View style={[styles.container, style]}>
       <Text style={city === '' ? styles.placeholder : styles.label}>City</Text>
       <View style={styles.row}>
         <TextInput
@@ -47,18 +47,20 @@ const styles = StyleSheet.create({
     width: '100%',
   },
   label: {
-    color: colors.secondary,
-    fontSize: 18,
+    color: colors.placeholder,
+    fontSize: 16,
+    fontWeight: 'bold',
     letterSpacing: 1,
-    position: 'relative',
-    top: -10,
+    position: 'absolute',
+    top: -18,
   },
   placeholder: {
-    color: colors.secondary,
+    color: colors.placeholder,
     fontSize: 40,
+    fontWeight: 'bold',
     letterSpacing: 1,
-    position: 'relative',
-    top: 50,
+    position: 'absolute',
+    top: 0,
   },
   row: {
     alignItems: 'center',

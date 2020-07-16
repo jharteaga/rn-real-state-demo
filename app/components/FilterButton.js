@@ -2,10 +2,10 @@ import React from 'react';
 import { StyleSheet, View, TouchableOpacity, Text } from 'react-native';
 import colors from '../config/colors';
 
-function FilterButton({ title, style }) {
+function FilterButton({ title, style, onPress }) {
   return (
-    <TouchableOpacity style={style}>
-      <View style={styles.container}>
+    <TouchableOpacity onPress={onPress}>
+      <View style={[styles.container, style]}>
         <Text style={styles.text}>{title}</Text>
       </View>
     </TouchableOpacity>

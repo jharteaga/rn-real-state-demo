@@ -6,6 +6,7 @@ const colors = {
   mediumGray: '#F6F7FB',
   placeholder: '#ADADAD',
   gray: '#999999',
+  filterSelected: '#E17A89',
 };
 
 export default colors;

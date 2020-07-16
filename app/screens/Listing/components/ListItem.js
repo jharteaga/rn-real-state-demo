@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, View, Text } from 'react-native';
+import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
 import { Image } from 'react-native-expo-image-cache';
 
 import colors from '../../../config/colors';
@@ -7,7 +7,7 @@ import IconButton from '../../../components/IconButton';
 
 function ListItem({ item, style }) {
   return (
-    <View style={style}>
+    <TouchableOpacity style={style}>
       <IconButton iconSize={28} name="heart-outline" style={styles.like} />
       <Image
         preview={{
@@ -25,7 +25,7 @@ function ListItem({ item, style }) {
         {item.bedrooms} bedrooms / {item.bathrooms} bathrooms /{' '}
         {item.squareFeet} sqft
       </Text>
-    </View>
+    </TouchableOpacity>
   );
 }
 

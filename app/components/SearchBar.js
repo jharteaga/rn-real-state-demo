@@ -19,7 +19,9 @@ function SearchBar({ style }) {
 
   return (
     <View style={[styles.container, style]}>
-      <Text style={city === '' ? styles.placeholder : styles.label}>City</Text>
+      <Text style={city === '' ? styles.placeholder : styles.label}>
+        Canada City
+      </Text>
       <View style={styles.row}>
         <TextInput
           style={styles.text}

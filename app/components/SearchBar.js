@@ -10,7 +10,7 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 import colors from '../config/colors';
 
-function SearchBar({ style }) {
+function SearchBar({ style, onChange }) {
   const [city, setCity] = useState('');
 
   const handleChange = (text) => {
@@ -25,7 +25,10 @@ function SearchBar({ style }) {
       <View style={styles.row}>
         <TextInput
           style={styles.text}
-          onChangeText={(text) => handleChange(text)}
+          onChangeText={(text) => {
+            handleChange(text);
+            onChange(text);
+          }}
         >
           {city}
         </TextInput>

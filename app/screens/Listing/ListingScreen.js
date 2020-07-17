@@ -1,4 +1,4 @@
-import React, { useReducer } from 'react';
+import React, { useReducer, useState } from 'react';
 import { StyleSheet, View, ScrollView } from 'react-native';
 
 import FilterButton from '../../components/FilterButton';
@@ -53,13 +53,20 @@ const reducer = (filters, action) => {
 };
 
 function ListingScreen(props) {
+  const [housesList, setHousesList] = useState(houses);
   const [filters, dispatch] = useReducer(reducer, initFilters);
+
+  const handleInputChange = (text) => {
+    setHousesList(
+      houses.filter((h) => h.city.toUpperCase().includes(text.toUpperCase()))
+    );
+  };
 
   return (
     <Screen>
       <View style={styles.container}>
         <Header style={styles.header} />
-        <SearchBar style={styles.searchBar} />
+        <SearchBar style={styles.searchBar} onChange={handleInputChange} />
         <ScrollView
           horizontal={true}
           style={styles.filters}
@@ -139,7 +146,7 @@ function ListingScreen(props) {
           />
         </ScrollView>
         <ScrollView showsVerticalScrollIndicator={false} style={styles.listing}>
-          {houses.map((h) => (
+          {housesList.map((h) => (
             <ListItem item={h} key={h.id} style={styles.listItem} />
           ))}
         </ScrollView>

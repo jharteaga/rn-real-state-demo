@@ -4,6 +4,9 @@ import { StyleSheet, View, TextInput, Text } from 'react-native';
 import colors from '../config/colors';
 
 function SearchBar({ style, onChange }) {
+  /**
+   * State to handle the label effect
+   */
   const [city, setCity] = useState('');
 
   const handleChange = (text) => {

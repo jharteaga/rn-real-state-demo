@@ -1,5 +1,8 @@
 import houses from '../assets/data/houses';
 
+/**
+ * Array of objects with every filter information
+ */
 export const initFilters = [
   {
     id: 0,
@@ -33,6 +36,11 @@ export const initFilters = [
   },
 ];
 
+/**
+ * Function to identify filter pressed
+ * @param filters Array of filters object
+ * @param action Action sent by dispatcher
+ */
 export const toggleFilter = (filters, action) => {
   const tfilters = filters.map((f) => {
     if (f.name === action) {
@@ -52,8 +60,14 @@ export const toggleFilter = (filters, action) => {
   return tfilters;
 };
 
-export const filterHouses = (currentHouses, housesByText, filtersList) => {
-  let houses = housesByText.length ? housesByText : currentHouses;
+/**
+ * Function to filter list of houses according to filters selected
+ * @param allHouses Completely array of houses object
+ * @param housesByCity Array of houses object according to search bar value by city
+ * @param filtersList Array of filter objects with active status updated
+ */
+export const filterHouses = (allHouses, housesByCity, filtersList) => {
+  let houses = housesByCity.length ? housesByCity : allHouses;
   for (let f of filtersList) {
     if (f.name === 'less than' && f.active)
       houses = houses.filter((h) => h.price < 500000);

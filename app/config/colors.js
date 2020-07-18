@@ -1,3 +1,6 @@
+/**
+ * Object with hex colors use inside the application
+ */
 const colors = {
   primary: '#FFF',
   secondary: '#58585A',

@@ -21,7 +21,7 @@ const houseReducer = (housesList, action) => {
 
 function ListingScreen(props) {
   const [housesList, setHouseList] = useState(houses);
-  const [housesByText, setHousesByText] = useState([]);
+  const [housesByCity, setHousesByCity] = useState([]);
   const [filters, dispatchFilter] = useReducer(filterReducer, initFilters);
 
   const handleInputChange = (text) => {
@@ -29,7 +29,7 @@ function ListingScreen(props) {
       h.city.toUpperCase().startsWith(text.toUpperCase())
     );
     setHouseList(list);
-    setHousesByText(list);
+    setHousesByCity(list);
   };
 
   const renderItem = ({ item }) => (
@@ -37,7 +37,7 @@ function ListingScreen(props) {
   );
 
   useEffect(() => {
-    setHouseList(filterHouses(houses, housesByText, filters));
+    setHouseList(filterHouses(houses, housesByCity, filters));
   }, [filters]);
 
   return (

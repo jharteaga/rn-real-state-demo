@@ -1,3 +1,6 @@
+/**
+ * Array of objects with houses information
+ */
 const houses = [
   {
     id: 1,

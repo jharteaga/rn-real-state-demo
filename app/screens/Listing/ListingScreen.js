@@ -14,11 +14,6 @@ const filterReducer = (filters, action) => {
   return toggleFilter(filters, action.type);
 };
 
-const houseReducer = (housesList, action) => {
-  console.log(action.payload);
-  return filterHouses(houses, action.payload);
-};
-
 function ListingScreen(props) {
   const [housesList, setHouseList] = useState(houses);
   const [housesByCity, setHousesByCity] = useState([]);

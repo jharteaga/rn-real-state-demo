@@ -36,7 +36,7 @@ function ListingScreen(props) {
   }, [filters]);
 
   return (
-    <Screen style={styles.screen}>
+    <Screen>
       <View style={styles.container}>
         <Header style={styles.header} />
         <SearchBar style={styles.searchBar} onChange={handleInputChange} />

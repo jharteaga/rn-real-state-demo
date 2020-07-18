@@ -1,12 +1,5 @@
 import React, { useState } from 'react';
-import {
-  StyleSheet,
-  View,
-  TextInput,
-  Text,
-  TouchableOpacity,
-} from 'react-native';
-import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { StyleSheet, View, TextInput, Text } from 'react-native';
 
 import colors from '../config/colors';
 
@@ -22,7 +15,7 @@ function SearchBar({ style, onChange }) {
       <Text style={city === '' ? styles.placeholder : styles.label}>
         Canada City
       </Text>
-      <View style={styles.row}>
+      <View style={styles.searchBar}>
         <TextInput
           style={styles.text}
           onChangeText={(text) => {
@@ -32,13 +25,6 @@ function SearchBar({ style, onChange }) {
         >
           {city}
         </TextInput>
-        <TouchableOpacity>
-          <MaterialCommunityIcons
-            name="tune"
-            color={colors.secondary}
-            size={30}
-          />
-        </TouchableOpacity>
       </View>
     </View>
   );
@@ -67,7 +53,7 @@ const styles = StyleSheet.create({
     position: 'absolute',
     top: 0,
   },
-  row: {
+  searchBar: {
     alignItems: 'center',
     flexDirection: 'row',
     justifyContent: 'space-between',

@@ -1,13 +1,13 @@
-import React, { useReducer, useState } from 'react';
+import React, { useReducer, useState, useEffect } from 'react';
 import { StyleSheet, View, ScrollView, FlatList, Text } from 'react-native';
 
+import colors from '../../config/colors';
 import FilterButton from '../../components/FilterButton';
-import houses from '../../assets/data/houses';
 import Header from './components/Header';
+import houses from '../../assets/data/houses';
+import ListItem from './components/ListItem';
 import Screen from '../../components/Screen';
 import SearchBar from '../../components/SearchBar';
-import ListItem from './components/ListItem';
-import colors from '../../config/colors';
 import { filterHouses, initFilters, toggleFilter } from '../../config/filters';
 
 const filterReducer = (filters, action) => {
@@ -15,22 +15,30 @@ const filterReducer = (filters, action) => {
 };
 
 const houseReducer = (housesList, action) => {
+  console.log(action.payload);
   return filterHouses(houses, action.payload);
 };
 
 function ListingScreen(props) {
-  const [housesList, dispatchHouses] = useReducer(houseReducer, houses);
+  const [housesList, setHouseList] = useState(houses);
+  const [housesByText, setHousesByText] = useState([]);
   const [filters, dispatchFilter] = useReducer(filterReducer, initFilters);
 
   const handleInputChange = (text) => {
-    setHousesList(
-      houses.filter((h) => h.city.toUpperCase().startsWith(text.toUpperCase()))
+    const list = houses.filter((h) =>
+      h.city.toUpperCase().startsWith(text.toUpperCase())
     );
+    setHouseList(list);
+    setHousesByText(list);
   };
 
   const renderItem = ({ item }) => (
     <ListItem item={item} style={styles.listItem} />
   );
+
+  useEffect(() => {
+    setHouseList(filterHouses(houses, housesByText, filters));
+  }, [filters]);
 
   return (
     <Screen style={styles.screen}>
@@ -44,13 +52,7 @@ function ListingScreen(props) {
                 f.visible && (
                   <FilterButton
                     key={f.id}
-                    onPress={() => {
-                      dispatchFilter({ type: f.name });
-                      dispatchHouses({
-                        type: f.name,
-                        payload: filters,
-                      });
-                    }}
+                    onPress={() => dispatchFilter({ type: f.name })}
                     style={
                       filters[f.id].active
                         ? styles.filterButtonActive

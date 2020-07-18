@@ -52,8 +52,8 @@ export const toggleFilter = (filters, action) => {
   return tfilters;
 };
 
-export const filterHouses = (originalHouses, filtersList) => {
-  let houses = originalHouses;
+export const filterHouses = (currentHouses, housesByText, filtersList) => {
+  let houses = housesByText.length ? housesByText : currentHouses;
   for (let f of filtersList) {
     if (f.name === 'less than' && f.active)
       houses = houses.filter((h) => h.price < 500000);

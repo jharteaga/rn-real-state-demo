@@ -18,13 +18,13 @@ function Header(props) {
       <View style={styles.topButtons}>
         <IconButton
           name="arrow-left"
-          iconSize={30}
+          iconSize={25}
           iconColor={colors.lightGray}
           style={styles.button}
         />
         <IconButton
           name="heart-outline"
-          iconSize={30}
+          iconSize={25}
           iconColor={colors.lightGray}
           style={styles.button}
         />

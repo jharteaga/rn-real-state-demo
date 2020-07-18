@@ -5,7 +5,7 @@ const houses = [
       'https://res.cloudinary.com/di5y8jhl0/image/upload/v1594794354/rn-real-state/home1_xhrdcb.jpg',
     thumbnailUrl:
       'https://res.cloudinary.com/di5y8jhl0/image/upload/c_thumb,w_100/v1594794354/rn-real-state/home1_xhrdcb.jpg',
-    price: '$200,000',
+    price: 590000,
     city: 'Vancouver',
     address: '1225 Robson St, V8Y 9D3, BC',
     description:
@@ -23,7 +23,7 @@ const houses = [
       'https://res.cloudinary.com/di5y8jhl0/image/upload/v1594794357/rn-real-state/home11_dw1ard.jpg',
     thumbnailUrl:
       'https://res.cloudinary.com/di5y8jhl0/image/upload/c_thumb,w_100/v1594794357/rn-real-state/home11_dw1ard.jpg',
-    price: '$125,000',
+    price: 125000,
     city: 'Toronto',
     address: '789 Thurlow St, V8Y 9D3, ON',
     description:
@@ -41,7 +41,7 @@ const houses = [
       'https://res.cloudinary.com/di5y8jhl0/image/upload/v1594794357/rn-real-state/home17_orcqrx.jpg',
     thumbnailUrl:
       'https://res.cloudinary.com/di5y8jhl0/image/upload/c_thumb,w_100/v1594794357/rn-real-state/home17_orcqrx.jpg',
-    price: '$175,000',
+    price: 175000,
     city: 'Saskatoon',
     address: '123 Byro St, V8Y 9D3, SK',
     description:
@@ -59,7 +59,7 @@ const houses = [
       'https://res.cloudinary.com/di5y8jhl0/image/upload/v1594794357/rn-real-state/home14_qr7eqp.jpg',
     thumbnailUrl:
       'https://res.cloudinary.com/di5y8jhl0/image/upload/c_thumb,w_100/v1594794357/rn-real-state/home14_qr7eqp.jpg',
-    price: '$475,000',
+    price: 475000,
     city: 'Montreal',
     address: '679 Howe St, V8Y 9D3, QC',
     description:
@@ -77,7 +77,7 @@ const houses = [
       'https://res.cloudinary.com/di5y8jhl0/image/upload/v1594794357/rn-real-state/home15_m6bcnp.jpg',
     thumbnailUrl:
       'https://res.cloudinary.com/di5y8jhl0/image/upload/c_thumb,w_100/v1594794357/rn-real-state/home15_m6bcnp.jpg',
-    price: '$225,000',
+    price: 225000,
     city: 'Ottawa',
     address: '111 Jason St, V8Y 9D3, ON',
     description:
@@ -95,7 +95,7 @@ const houses = [
       'https://res.cloudinary.com/di5y8jhl0/image/upload/v1594794357/rn-real-state/home13_lxhojo.jpg',
     thumbnailUrl:
       'https://res.cloudinary.com/di5y8jhl0/image/upload/c_scale,w_100/v1594794357/rn-real-state/home13_lxhojo.jpg',
-    price: '$555,000',
+    price: 555000,
     city: 'Calgary',
     address: '789 Thurlow St, V8Y 9D3, AB',
     description:
@@ -113,7 +113,7 @@ const houses = [
       'https://res.cloudinary.com/di5y8jhl0/image/upload/v1594794357/rn-real-state/home16_l7f9oa.jpg',
     thumbnailUrl:
       'https://res.cloudinary.com/di5y8jhl0/image/upload/v1594794357/rn-real-state/home16_l7f9oa.jpg',
-    price: '$510,000',
+    price: 510000,
     city: 'Montreal',
     address: '789 Thurlow St, V8Y 9D3, QC',
     description:
@@ -131,7 +131,7 @@ const houses = [
       'https://res.cloudinary.com/di5y8jhl0/image/upload/v1594794355/rn-real-state/home6_xrkvxm.jpg',
     thumbnailUrl:
       'https://res.cloudinary.com/di5y8jhl0/image/upload/v1594794355/rn-real-state/home6_xrkvxm.jpg',
-    price: '$875,500',
+    price: 875500,
     city: 'Vancouver',
     address: '789 Thurlow St, V8Y 9D3, BC',
     description:
@@ -149,7 +149,7 @@ const houses = [
       'https://res.cloudinary.com/di5y8jhl0/image/upload/v1594794355/rn-real-state/home12_tuhauy.jpg',
     thumbnailUrl:
       'https://res.cloudinary.com/di5y8jhl0/image/upload/c_thumb,w_100/v1594794355/rn-real-state/home12_tuhauy.jpg',
-    price: '$620,200',
+    price: 620200,
     city: 'Edmonton',
     address: '789 Thurlow St, V8Y 9D3, AB',
     description:
@@ -167,7 +167,7 @@ const houses = [
       'https://res.cloudinary.com/di5y8jhl0/image/upload/v1594794355/rn-real-state/home10_jrbxlq.jpg',
     thumbnailUrl:
       'https://res.cloudinary.com/di5y8jhl0/image/upload/c_thumb,w_100/v1594794355/rn-real-state/home10_jrbxlq.jpg',
-    price: '$355,300',
+    price: 355300,
     city: 'Winnipeg',
     address: '789 Thurlow St, V8Y 9D3, MB',
     description:
@@ -185,7 +185,7 @@ const houses = [
       'https://res.cloudinary.com/di5y8jhl0/image/upload/v1594794355/rn-real-state/home9_l8gxog.jpg',
     thumbnailUrl:
       'https://res.cloudinary.com/di5y8jhl0/image/upload/c_thumb,w_100/v1594794355/rn-real-state/home9_l8gxog.jpg',
-    price: '$410,750',
+    price: 410750,
     city: 'Victoria',
     address: '789 Thurlow St, V8Y 9D3, BC',
     description:
@@ -203,7 +203,7 @@ const houses = [
       'https://res.cloudinary.com/di5y8jhl0/image/upload/v1594794354/rn-real-state/home5_itrpnd.jpg',
     thumbnailUrl:
       'https://res.cloudinary.com/di5y8jhl0/image/upload/c_thumb,w_100/v1594794354/rn-real-state/home5_itrpnd.jpg',
-    price: '$960,300',
+    price: 960300,
     city: 'Vancouver',
     address: '789 Thurlow St, V8Y 9D3, BC',
     description:
@@ -221,7 +221,7 @@ const houses = [
       'https://res.cloudinary.com/di5y8jhl0/image/upload/v1594794354/rn-real-state/home8_sxrre3.jpg',
     thumbnailUrl:
       'https://res.cloudinary.com/di5y8jhl0/image/upload/c_thumb,w_100/v1594794354/rn-real-state/home8_sxrre3.jpg',
-    price: '$105,900',
+    price: 105900,
     city: 'Halifax',
     address: '789 Thurlow St, V8Y 9D3, NS',
     description:
@@ -239,7 +239,7 @@ const houses = [
       'https://res.cloudinary.com/di5y8jhl0/image/upload/v1594794354/rn-real-state/home7_zv8i70.jpg',
     thumbnailUrl:
       'https://res.cloudinary.com/di5y8jhl0/image/upload/c_thumb,w_100/v1594794354/rn-real-state/home7_zv8i70.jpg',
-    price: '$680,900',
+    price: 680900,
     city: 'Regina',
     address: '789 Thurlow St, V8Y 9D3, SK',
     description:
@@ -257,7 +257,7 @@ const houses = [
       'https://res.cloudinary.com/di5y8jhl0/image/upload/v1594794354/rn-real-state/home3_itrdfh.jpg',
     thumbnailUrl:
       'https://res.cloudinary.com/di5y8jhl0/image/upload/c_thumb,w_100/v1594794354/rn-real-state/home3_itrdfh.jpg',
-    price: '$740,000',
+    price: 740000,
     city: 'Kelowna',
     address: '789 Thurlow St, V8Y 9D3, BC',
     description:
@@ -275,7 +275,7 @@ const houses = [
       'https://res.cloudinary.com/di5y8jhl0/image/upload/v1594794353/rn-real-state/home20_vpv7mq.jpg',
     thumbnailUrl:
       'https://res.cloudinary.com/di5y8jhl0/image/upload/c_thumb,w_100/v1594794353/rn-real-state/home20_vpv7mq.jpg',
-    price: '$1,100,000',
+    price: 1100000,
     city: 'Vancouver',
     address: '789 Thurlow St, V8Y 9D3, BC',
     description:
@@ -293,7 +293,7 @@ const houses = [
       'https://res.cloudinary.com/di5y8jhl0/image/upload/v1594794353/rn-real-state/home2_zwjpjc.jpg',
     thumbnailUrl:
       'https://res.cloudinary.com/di5y8jhl0/image/upload/c_thumb,w_100/v1594794353/rn-real-state/home2_zwjpjc.jpg',
-    price: '$925,300',
+    price: 925300,
     city: 'Banff',
     address: '789 Thurlow St, V8Y 9D3, AB',
     description:
@@ -311,7 +311,7 @@ const houses = [
       'https://res.cloudinary.com/di5y8jhl0/image/upload/v1594794352/rn-real-state/home19_twx33f.jpg',
     thumbnailUrl:
       'https://res.cloudinary.com/di5y8jhl0/image/upload/c_thumb,w_100/v1594794352/rn-real-state/home19_twx33f.jpg',
-    price: '$440,000',
+    price: 440000,
     city: 'Thunder Bay',
     address: '789 Thurlow St, V8Y 9D3, ON',
     description:
@@ -329,7 +329,7 @@ const houses = [
       'https://res.cloudinary.com/di5y8jhl0/image/upload/v1594794351/rn-real-state/home4_xusyjc.jpg',
     thumbnailUrl:
       'https://res.cloudinary.com/di5y8jhl0/image/upload/c_thumb,w_100/v1594794351/rn-real-state/home4_xusyjc.jpg',
-    price: '$1,500,000',
+    price: 1500000,
     city: 'Vancouver',
     address: '789 Thurlow St, V8Y 9D3, BC',
     description:

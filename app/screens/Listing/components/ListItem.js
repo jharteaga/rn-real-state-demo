@@ -18,7 +18,9 @@ function ListItem({ item, style }) {
         uri={item.imageUrl}
       />
       <View style={styles.row}>
-        <Text style={styles.price}>{item.price}</Text>
+        <Text style={styles.price}>
+          ${item.price.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')}
+        </Text>
         <Text style={styles.address}>{item.address}</Text>
       </View>
       <Text style={styles.description}>

@@ -7,15 +7,15 @@ function SearchBar({ style, onChange }) {
   /**
    * State to handle the label effect
    */
-  const [city, setCity] = useState('');
+  const [input, setInput] = useState('');
 
   const handleChange = (text) => {
-    setCity(text);
+    setInput(text);
   };
 
   return (
     <View style={[styles.container, style]}>
-      <Text style={city === '' ? styles.placeholder : styles.label}>
+      <Text style={input === '' ? styles.placeholder : styles.label}>
         Canada City
       </Text>
       <View style={styles.searchBar}>
@@ -26,7 +26,7 @@ function SearchBar({ style, onChange }) {
             onChange(text);
           }}
         >
-          {city}
+          {input}
         </TextInput>
       </View>
     </View>

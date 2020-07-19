@@ -68,6 +68,7 @@ export const toggleFilter = (filters, action) => {
  */
 export const filterHouses = (allHouses, housesByCity, filtersList) => {
   let houses = housesByCity.length ? housesByCity : allHouses;
+
   for (let f of filtersList) {
     if (f.name === 'less than' && f.active)
       houses = houses.filter((h) => h.price < 500000);
@@ -84,4 +85,49 @@ export const filterHouses = (allHouses, housesByCity, filtersList) => {
   }
 
   return houses;
+};
+
+/**
+ * Function to validate if there are filters activated
+ * @param filters Array of filter object
+ */
+export const isFiltered = (filters) => {
+  let res = false;
+  filters.map((f) => {
+    if (f.active) res = true;
+  });
+
+  return res;
+};
+
+export const getListFilteredByText = (
+  houses,
+  housesByCity,
+  housesByFilters,
+  text
+) => {
+  let list = [];
+
+  if (!housesByCity.length && !housesByFilters.length) {
+    list = houses.filter((h) =>
+      h.city.toUpperCase().startsWith(text.toUpperCase())
+    );
+  }
+  if (!housesByCity.length && housesByFilters.length) {
+    list = housesByFilters.filter((h) =>
+      h.city.toUpperCase().startsWith(text.toUpperCase())
+    );
+  }
+  if (housesByCity.length && !housesByFilters.length) {
+    list = houses.filter((h) =>
+      h.city.toUpperCase().startsWith(text.toUpperCase())
+    );
+  }
+  if (housesByCity.length && housesByFilters.length) {
+    list = housesByFilters.filter((h) =>
+      h.city.toUpperCase().startsWith(text.toUpperCase())
+    );
+  }
+
+  return list;
 };

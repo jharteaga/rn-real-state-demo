@@ -1,13 +1,21 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
 import { Image } from 'react-native-expo-image-cache';
+import { NavigationContext } from '@react-navigation/native';
 
 import colors from '../../../config/colors';
 import IconButton from '../../../components/IconButton';
+import routes from '../../../navigation/routes';
 
 function ListItem({ item, style }) {
+  const navigation = useContext(NavigationContext);
+
+  const handlePress = () => {
+    navigation.navigate(routes.DETAIL_ITEM);
+  };
+
   return (
-    <TouchableOpacity style={style}>
+    <TouchableOpacity style={style} onPress={handlePress}>
       <IconButton iconSize={28} name="heart-outline" style={styles.like} />
       <Image
         preview={{

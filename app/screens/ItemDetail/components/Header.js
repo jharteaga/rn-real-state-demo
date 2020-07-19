@@ -1,11 +1,22 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Image, StyleSheet, View } from 'react-native';
+import { NavigationContext } from '@react-navigation/native';
 import Constants from 'expo-constants';
 
-import IconButton from '../../../components/IconButton';
 import colors from '../../../config/colors';
+import IconButton from '../../../components/IconButton';
+import routes from '../../../navigation/routes';
 
 function Header(props) {
+  const navigation = useContext(NavigationContext);
+
+  const handleBack = () => {
+    navigation.navigate(routes.LISTING);
+  };
+  const handleLike = () => {
+    console.log('liked on Detail');
+  };
+
   return (
     <View>
       <Image
@@ -21,12 +32,14 @@ function Header(props) {
           iconSize={25}
           iconColor={colors.lightGray}
           style={styles.button}
+          onPress={handleBack}
         />
         <IconButton
           name="heart-outline"
           iconSize={25}
           iconColor={colors.lightGray}
           style={styles.button}
+          onPress={handleLike}
         />
       </View>
     </View>

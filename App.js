@@ -1,16 +1,17 @@
 import React from 'react';
-import { StyleSheet } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
+import { NavigationContainer } from '@react-navigation/native';
 
-import ListingScreen from './app/screens/Listing/ListingScreen';
+import AppNavigator from './app/navigation/AppNavigator';
+import navigationTheme from './app/navigation/navigationTheme';
 
 export default function App() {
   return (
     <>
       <StatusBar style="dark" />
-      <ListingScreen />
+      <NavigationContainer theme={navigationTheme}>
+        <AppNavigator />
+      </NavigationContainer>
     </>
   );
 }
-
-const styles = StyleSheet.create({});

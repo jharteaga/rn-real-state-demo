@@ -6,13 +6,21 @@ import Header from './components/Header';
 import Information from './components/Information';
 import Price from './components/Price';
 
-function ItemDetailScreen(props) {
+function ItemDetailScreen({ route }) {
+  const { item } = route.params;
+
   return (
     <ScrollView showsVerticalScrollIndicator={false}>
       <StatusBar style="light" />
-      <Header />
-      <Price />
-      <Information />
+      <Header imageUrl={item.imageUrl} thumbnailUrl={item.thumbnailUrl} />
+      <Price price={item.price} address={item.address} />
+      <Information
+        squareFeet={item.squareFeet}
+        bedrooms={item.bedrooms}
+        bathrooms={item.bathrooms}
+        garage={item.garage}
+        description={item.description}
+      />
     </ScrollView>
   );
 }

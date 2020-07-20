@@ -3,38 +3,33 @@ import { StyleSheet, View, Text, ScrollView } from 'react-native';
 
 import colors from '../../../config/colors';
 
-function Information(props) {
+function Information({ squareFeet, bedrooms, bathrooms, garage, description }) {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>House Information</Text>
       <View style={styles.infoContainer}>
         <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
           <View style={styles.column}>
-            <Text style={styles.squareInfo}>1,416</Text>
+            <Text style={styles.squareInfo}>
+              {squareFeet.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')}
+            </Text>
             <Text style={styles.label}>Square Feet</Text>
           </View>
           <View style={styles.column}>
-            <Text style={styles.squareInfo}>3</Text>
+            <Text style={styles.squareInfo}>{bedrooms}</Text>
             <Text style={styles.label}>Bedrooms</Text>
           </View>
           <View style={styles.column}>
-            <Text style={styles.squareInfo}>2</Text>
+            <Text style={styles.squareInfo}>{bathrooms}</Text>
             <Text style={styles.label}>Bathrooms</Text>
           </View>
           <View style={styles.column}>
-            <Text style={styles.squareInfo}>2</Text>
+            <Text style={styles.squareInfo}>{garage}</Text>
             <Text style={styles.label}>Garage</Text>
           </View>
         </ScrollView>
       </View>
-      <Text style={styles.description}>
-        Clean and well kept two-level home on a large 46.5x120 lot on a quiet
-        cul-de-sac and high side of the road in popular Fraserview area!
-        Featuring 3 bedrooms and 2 Baths on the top floor, bright and spacious
-        living room and dining room with laminate flooring and new paint
-        throughout and updated kitchen with newer appliances and Fischer Paykal
-        Induction Stove.
-      </Text>
+      <Text style={styles.description}>{description}</Text>
     </View>
   );
 }

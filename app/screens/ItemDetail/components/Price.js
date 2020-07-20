@@ -3,12 +3,14 @@ import { StyleSheet, View, Text } from 'react-native';
 
 import colors from '../../../config/colors';
 
-function Price(props) {
+function Price({ address, price }) {
   return (
     <View style={styles.container}>
       <View style={styles.column}>
-        <Text style={styles.price}>$200,000</Text>
-        <Text style={styles.city}>Vancouver, BC</Text>
+        <Text style={styles.price}>
+          ${price.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')}
+        </Text>
+        <Text style={styles.city}>{address}</Text>
       </View>
       <View style={styles.timeContainer}>
         <Text style={styles.time}> 14 hours ago</Text>

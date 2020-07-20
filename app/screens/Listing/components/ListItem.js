@@ -11,7 +11,7 @@ function ListItem({ item, style }) {
   const navigation = useContext(NavigationContext);
 
   const handlePress = () => {
-    navigation.navigate(routes.DETAIL_ITEM);
+    navigation.navigate(routes.DETAIL_ITEM, { item: item });
   };
 
   return (

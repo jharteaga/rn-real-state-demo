@@ -1,13 +1,14 @@
 import React, { useContext } from 'react';
-import { Image, StyleSheet, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import { NavigationContext } from '@react-navigation/native';
 import Constants from 'expo-constants';
 
 import colors from '../../../config/colors';
 import IconButton from '../../../components/IconButton';
 import routes from '../../../navigation/routes';
+import { Image } from 'react-native-expo-image-cache';
 
-function Header(props) {
+function Header({ imageUrl, thumbnailUrl }) {
   const navigation = useContext(NavigationContext);
 
   const handleBack = () => {
@@ -21,9 +22,9 @@ function Header(props) {
     <View>
       <Image
         style={styles.image}
-        source={{
-          uri:
-            'https://res.cloudinary.com/di5y8jhl0/image/upload/v1594794354/rn-real-state/home1_xhrdcb.jpg',
+        uri={imageUrl}
+        preview={{
+          uri: thumbnailUrl,
         }}
       />
       <View style={styles.topButtons}>

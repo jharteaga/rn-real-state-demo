@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { StyleSheet, View } from 'react-native';
 import { NavigationContext } from '@react-navigation/native';
 import Constants from 'expo-constants';
@@ -9,13 +9,14 @@ import routes from '../../../navigation/routes';
 import { Image } from 'react-native-expo-image-cache';
 
 function Header({ imageUrl, thumbnailUrl }) {
+  const [liked, setLiked] = useState(false);
   const navigation = useContext(NavigationContext);
 
   const handleBack = () => {
     navigation.navigate(routes.LISTING);
   };
   const handleLike = () => {
-    console.log('liked on Detail');
+    setLiked(!liked);
   };
 
   return (
@@ -36,9 +37,9 @@ function Header({ imageUrl, thumbnailUrl }) {
           onPress={handleBack}
         />
         <IconButton
-          name="heart-outline"
+          name={liked ? 'heart' : 'heart-outline'}
           iconSize={25}
-          iconColor={colors.lightGray}
+          iconColor={liked ? colors.heart : colors.lightGray}
           style={styles.button}
           onPress={handleLike}
         />

@@ -10,6 +10,7 @@ const colors = {
   placeholder: '#ADADAD',
   gray: '#999999',
   filterSelected: '#E17A89',
+  heart: '#e31b23',
 };
 
 export default colors;

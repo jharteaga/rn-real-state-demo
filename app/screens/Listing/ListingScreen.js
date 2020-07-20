@@ -19,7 +19,7 @@ const filterReducer = (filters, action) => {
   return toggleFilter(filters, action.type);
 };
 
-function ListingScreen(props) {
+function ListingScreen({ navigation }) {
   const [housesList, setHouseList] = useState(houses);
   const [housesByCity, setHousesByCity] = useState([]);
   const [housesByFilters, setHousesByFilters] = useState([]);
@@ -64,10 +64,12 @@ function ListingScreen(props) {
     }
   }, [filters]);
 
+  const handleDrawer = () => {};
+
   return (
     <Screen>
       <View style={styles.container}>
-        <Header style={styles.header} />
+        <Header style={styles.header} onPress={navigation.openDrawer} />
         <SearchBar style={styles.searchBar} onChange={handleInputChange} />
         <HorizontalFilters filters={filters} onDispatch={dispatchFilter} />
         <Listing houses={housesList} />

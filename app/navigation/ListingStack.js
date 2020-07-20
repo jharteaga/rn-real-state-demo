@@ -6,7 +6,7 @@ import ListingScreen from '../screens/Listing/ListingScreen';
 
 const Stack = createStackNavigator();
 
-function AppNavigator(props) {
+function ListingStack(props) {
   return (
     <Stack.Navigator initialRouteName="Listing">
       <Stack.Screen
@@ -23,4 +23,4 @@ function AppNavigator(props) {
   );
 }
 
-export default AppNavigator;
+export default ListingStack;

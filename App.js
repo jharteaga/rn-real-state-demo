@@ -2,7 +2,7 @@ import React from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { NavigationContainer } from '@react-navigation/native';
 
-import ListingStack from './app/navigation/ListingStack';
+import AppDrawer from './app/navigation/AppDrawer';
 import navigationTheme from './app/navigation/navigationTheme';
 
 export default function App() {
@@ -10,7 +10,7 @@ export default function App() {
     <>
       <StatusBar style="dark" />
       <NavigationContainer theme={navigationTheme}>
-        <ListingStack />
+        <AppDrawer />
       </NavigationContainer>
     </>
   );

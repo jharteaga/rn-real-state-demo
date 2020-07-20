@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
 import { Image } from 'react-native-expo-image-cache';
 import { NavigationContext } from '@react-navigation/native';
@@ -8,15 +8,26 @@ import IconButton from '../../../components/IconButton';
 import routes from '../../../navigation/routes';
 
 function ListItem({ item, style }) {
+  const [liked, setLiked] = useState(false);
   const navigation = useContext(NavigationContext);
 
   const handlePress = () => {
     navigation.navigate(routes.DETAIL_ITEM, { item: item });
   };
 
+  const handleLike = () => {
+    setLiked(!liked);
+  };
+
   return (
     <TouchableOpacity style={style} onPress={handlePress}>
-      <IconButton iconSize={28} name="heart-outline" style={styles.like} />
+      <IconButton
+        iconSize={28}
+        name={liked ? 'heart' : 'heart-outline'}
+        style={styles.like}
+        onPress={handleLike}
+        iconColor={liked ? colors.heart : colors.gray}
+      />
       <Image
         preview={{
           uri: item.thumbnailUrl,
